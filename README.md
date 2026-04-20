@@ -1,36 +1,25 @@
-# AI-Powered PDF Reader (FastAPI + React)
+# PDFLens
 
-An AI-powered PDF Reader that lets you open PDFs, highlight text, and instantly get explanations. Includes chat-with-PDF using RAG, semantic search, and Gemini-powered insights over the entire document.
+A fast and lightweight PDF viewer built for smooth rendering, clean UI, and simple document interaction.
 
-Tech stack: FastAPI, LlamaIndex, PostgreSQL + pgvector, React, PDF.js, Gemini API.
+## ✨ Features
 
-## Quick Start
+- 📄 View PDF documents seamlessly
+- ⚡ Fast loading and rendering
+- 🔍 Zoom in/out support
+- 📱 Responsive design (works across devices)
+- 🧭 Easy navigation between pages
+- 🎯 Minimal and clean user interface
 
-1) Copy env templates and fill values
+## 🚀 Tech Stack
 
-```
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
-```
+- Frontend: React / HTML / CSS / JavaScript  
+- PDF Rendering: PDF.js (or mention what you used)
 
-2) Start services via Docker Compose (optional)
+## 📦 Installation
 
-```
-docker compose -f infra/docker-compose.yml up -d
-```
+Clone the repository:
 
-3) Local dev (alternative)
-
-- Backend: create venv, install `backend/requirements.txt`, then run uvicorn.
-- Frontend: `cd frontend; npm install; npm run dev`.
-
-## Structure
-
-```
-backend/        # FastAPI, LlamaIndex, DB models, services
-frontend/       # React + Vite + PDF.js UI
-infra/          # Docker Compose and DB init scripts
-docs/           # Architecture and API notes
-```
-
-See `docs/architecture.md` and `docs/api.md` for details.
+```bash
+git clone https://github.com/darshil-sisodiya/pdfviewer.git
+cd pdfviewer
