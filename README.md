@@ -1,72 +1,141 @@
 # PDFSense AI
 
-An AI-powered PDF reader that lets you read, highlight, search, and chat with documents using RAG, semantic search, and Gemini-powered insights.
+AI-powered PDF reader with semantic search, RAG-based chat, and contextual explanations.
+
+---
+
+## Overview
+
+PDFSense AI allows you to read, explore, and interact with documents intelligently.  
+It combines fast PDF rendering with retrieval-augmented generation to provide precise, context-aware answers.
+
+---
 
 ## Features
-- Smooth PDF viewing (PDF.js)
-- Text highlighting and selection
-- Chat with PDF (RAG)
-- Semantic search using pgvector
-- Context-aware explanations
-- Gemini-powered insights and summaries
+
+**Core**
+- Fast in-browser PDF rendering using PDF.js
+- Text selection and highlighting
+- Clean and responsive interface
+
+**AI Capabilities**
+- Chat with PDF (RAG pipeline via LlamaIndex)
+- Context-aware explanations for selected text
+- Semantic search across the document
+- Gemini-powered summaries and insights
+
+**Search & Retrieval**
+- Vector search using PostgreSQL + pgvector
+- Accurate retrieval from large documents
+
+---
 
 ## Tech Stack
-Backend: FastAPI, LlamaIndex, PostgreSQL + pgvector, Gemini API  
-Frontend: React (Vite), PDF.js  
-Infra: Docker Compose  
+
+**Backend**
+- FastAPI
+- LlamaIndex
+- PostgreSQL with pgvector
+- Gemini API
+
+**Frontend**
+- React (Vite)
+- PDF.js
+
+**Infrastructure**
+- Docker Compose
+
+---
 
 ## Installation
 
-Clone the repository:
+### Clone repository
+
+```bash
 git clone https://github.com/darshil-sisodiya/pdfviewer.git
 cd pdfviewer
+```
 
-Setup environment variables:
+### Configure environment
+
+```bash
 cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
+```
 
-Fill in required values (DB, API keys, etc.)
+Update environment variables:
+- Database credentials
+- Gemini API key
 
-Run with Docker:
+---
+
+## Running the Application
+
+### Using Docker (recommended)
+
+```bash
 docker compose -f infra/docker-compose.yml up -d
+```
 
-OR run locally:
+---
 
-Backend:
+### Local Development
+
+**Backend**
+
+```bash
 cd backend
 python -m venv venv
-source venv/bin/activate   (Windows: venv\Scripts\activate)
+source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app:app --reload
+```
 
-Frontend:
+**Frontend**
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-## Folder Structure
+---
 
-```bash
-├── backend/        # FastAPI + LlamaIndex + DB logic
-├── frontend/       # React + PDF.js UI
-├── infra/          # Docker setup
-├── docs/           # Architecture + API docs
+## Project Structure
+
+```
+.
+├── backend/        FastAPI backend, RAG pipeline, database logic
+├── frontend/       React + PDF.js interface
+├── infra/          Docker configuration
+├── docs/           Architecture and API documentation
 └── README.md
 ```
-## How It Works
 
-1. PDFs are parsed and chunked using LlamaIndex  
-2. Embeddings stored in PostgreSQL (pgvector)  
-3. Queries use semantic retrieval (RAG)  
+---
+
+## System Flow
+
+1. PDF is parsed and chunked using LlamaIndex  
+2. Embeddings are stored in PostgreSQL (pgvector)  
+3. Queries trigger semantic retrieval  
 4. Gemini generates final responses  
 
-## Future Improvements
-- Annotations
+---
+
+## Future Work
+
+- Document annotations
 - Multi-document chat
-- User auth
-- Export insights
+- User authentication
+- Exportable insights
+
+---
 
 ## License
-MIT
+
+MIT License
+
+---
 
 Built by Darshil
