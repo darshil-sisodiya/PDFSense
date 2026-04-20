@@ -46,13 +46,13 @@ npm run dev
 
 ## Folder Structure
 
-.
+bash```
 ├── backend/        # FastAPI + LlamaIndex + DB logic
 ├── frontend/       # React + PDF.js UI
 ├── infra/          # Docker setup
 ├── docs/           # Architecture + API docs
 └── README.md
-
+```
 ## How It Works
 
 1. PDFs are parsed and chunked using LlamaIndex  
