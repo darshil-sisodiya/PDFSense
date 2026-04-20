@@ -18,8 +18,6 @@ A fast and lightweight PDF viewer built for smooth rendering, clean UI, and simp
 
 ## 📦 Installation
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/darshil-sisodiya/pdfviewer.git
 cd pdfviewer
