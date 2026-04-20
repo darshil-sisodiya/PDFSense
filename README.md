@@ -46,7 +46,7 @@ npm run dev
 
 ## Folder Structure
 
-bash```
+```bash
 ├── backend/        # FastAPI + LlamaIndex + DB logic
 ├── frontend/       # React + PDF.js UI
 ├── infra/          # Docker setup
